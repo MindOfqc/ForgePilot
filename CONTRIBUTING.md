@@ -20,3 +20,6 @@ All commits in this repository record changes made during this reconstruction. T
 ## Local data
 
 Do not commit `.env`, API credentials, local databases, uploads, generated indexes, build output, or other `.data/` runtime state. Add new configuration keys to `.env.example` with placeholders or local development values only.
+
+
+Product labels use ForgePilot. Stable devflow_* MCP tool names and .devflow repository configuration paths are retained as compatibility identifiers from the reference source.

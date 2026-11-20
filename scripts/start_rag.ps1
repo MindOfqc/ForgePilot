@@ -13,11 +13,11 @@ $backendDirectory = Join-Path $projectRoot "backend"
 $frontendDirectory = Join-Path $projectRoot "frontend"
 $pythonPath = Join-Path $backendDirectory ".venv\Scripts\python.exe"
 $dataDirectory = Join-Path $projectRoot ".data"
-$databasePath = Join-Path $dataDirectory "devflow-local-demo.db"
-$backendOutputLog = Join-Path $dataDirectory "devflow-backend.out.log"
-$backendErrorLog = Join-Path $dataDirectory "devflow-backend.err.log"
-$frontendOutputLog = Join-Path $dataDirectory "devflow-frontend.out.log"
-$frontendErrorLog = Join-Path $dataDirectory "devflow-frontend.err.log"
+$databasePath = Join-Path $dataDirectory "forgepilot-local-demo.db"
+$backendOutputLog = Join-Path $dataDirectory "forgepilot-backend.out.log"
+$backendErrorLog = Join-Path $dataDirectory "forgepilot-backend.err.log"
+$frontendOutputLog = Join-Path $dataDirectory "forgepilot-frontend.out.log"
+$frontendErrorLog = Join-Path $dataDirectory "forgepilot-frontend.err.log"
 
 if (-not (Test-Path -LiteralPath $pythonPath -PathType Leaf)) {
     throw "未找到 backend/.venv。请先创建虚拟环境并安装 backend/requirements.txt。"
@@ -126,7 +126,7 @@ try {
         throw "前端在 60 秒内没有就绪，请检查 $frontendErrorLog。"
     }
 
-    Write-Host "DevFlow AI 本地演示已启动："
+    Write-Host "ForgePilot AI 本地演示已启动："
     Write-Host "  前端：http://127.0.0.1:$FrontendPort"
     Write-Host "  后端：http://127.0.0.1:$BackendPort"
     Write-Host "  后端 PID：$($backendProcess.Id)"

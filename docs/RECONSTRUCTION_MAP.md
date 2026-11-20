@@ -5,7 +5,7 @@
 - Reference implementation: the complete project source currently in `E:\projects\DevFlow-AI`.
 - Study document: [16.4｜DevFlow AI 企业面试问答与参考答法](https://pcnb6zj457pg.feishu.cn/wiki/HyBGwWcyhi4u7Sk23OVc71dtnTe), read in view-only mode.
 - The study document groups 77 questions into eight topics. The commits below follow that topic order and split each topic into code-level implementation points. They are a reconstruction record, not a claim about the original project's historical development dates.
-- ForgePilot keeps the source implementation and its existing behavior, with product-facing branding updated. Internal compatibility identifiers are changed only when the related configuration is updated together.
+- ForgePilot keeps the source implementation and its existing behavior, with visible UI, documentation, prompts, package names, and runtime defaults branded as ForgePilot. Stable `devflow_*` tool names and `.devflow` repository config paths remain compatible with the source integration.
 
 ## Implementation sequence
 

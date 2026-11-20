@@ -2470,7 +2470,7 @@ export default function DashboardPage() {
             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-accent text-sm font-bold text-white">DF</div>
             {!isSidebarCollapsed && (
               <div className="min-w-0 flex-1">
-                <div className="workspace-display text-base font-semibold text-ink">DevFlow AI</div>
+                <div className="workspace-display text-base font-semibold text-ink">ForgePilot AI</div>
                 <div className="truncate text-xs text-slate-500">研发团队 PR / Issue 智能协作 Agent</div>
               </div>
             )}
@@ -2673,7 +2673,7 @@ export default function DashboardPage() {
                   const failedToolTitle = failedTools.map((call) => `${call.tool_name}: ${call.error ?? "failed"}`).join("\n");
                   return (
                     <article key={item.id} className="workspace-message" data-role={item.role}>
-                      <div className="workspace-message-author">{item.role === "user" ? "你" : "DevFlow AI"}</div>
+                      <div className="workspace-message-author">{item.role === "user" ? "你" : "ForgePilot AI"}</div>
                       <div className="workspace-message-body">
                         {item.role === "assistant" ? (
                           <>
@@ -4714,7 +4714,7 @@ function MemoryIndexPromptCard({
       ? `项目 ${repo.full_name} 上次扫描没有完成：${state.error_message || error || "未知错误"}`
       : isStale
         ? `项目 ${repo.full_name} 的本地内容已变化，建议更新索引，让回答保持新鲜。`
-        : "建立索引后，DevFlow AI 可以检索项目说明、架构文档、ADR、计划和经验记录，不必每次从零开始。";
+        : "建立索引后，ForgePilot AI 可以检索项目说明、架构文档、ADR、计划和经验记录，不必每次从零开始。";
   const actionLabel = scanning ? "扫描中..." : isFailed ? "重试扫描" : isStale ? "更新索引" : "开始扫描";
 
   return (

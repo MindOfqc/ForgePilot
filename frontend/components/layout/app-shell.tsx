@@ -21,7 +21,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <>
       <header className="app-header">
-        <Link href="/" className="app-brand">DevFlow AI</Link>
+        <Link href="/" className="app-brand">ForgePilot AI</Link>
         <nav className="app-navigation" aria-label="主导航">
           {navItems.map(({ href, label }) => (
             <Link
