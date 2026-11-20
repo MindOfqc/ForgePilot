@@ -11,7 +11,7 @@
 
 | Step | Study topics | Reproduction point | Main source areas | Status |
 | --- | --- | --- | --- | --- |
-| 01 | Q3, Q9–11, Q17, Q70 | Project scaffold, runtime settings, dependency manifests, local service configuration, and initial frontend shell | `backend/app/core`, `backend/app/db`, `frontend/package*`, `docker-compose.yml`, `scripts/` | Planned |
+| 01 | Q3, Q9–11, Q17, Q70 | Project scaffold, runtime settings, dependency manifests, local service configuration, and initial frontend shell | `backend/app/core`, `backend/app/db`, `frontend/package*`, `docker-compose.yml`, `scripts/` | Recreated |
 | 02 | Q3, Q18, Q33 | Relational entities and typed API contracts for repositories, conversations, engineering records, workflows, and drafts | `backend/app/db/models.py`, `backend/app/schemas/` | Recreated |
 | 03 | Q3, Q18 | GitHub client, repository connection, synchronization, and scheduled refresh | `backend/app/services/github/`, `backend/app/services/repos_sync.py`, `backend/app/api/routes/repos.py` | Recreated |
 | 04 | Q4, Q32 | Issue, PR, and CI retrieval endpoints with their source evidence and status models | `backend/app/api/routes/{issues,pull_requests,ci}.py`, `backend/app/services/github/` | Recreated |
@@ -38,7 +38,7 @@
 | 25 | Q68, Q70 | PR worktree checkout and local Compose deployment; document that a worktree is not a security sandbox | `backend/app/services/worktree_manager.py`, `docker-compose.yml`, `scripts/` | Recreated |
 | 26 | Q71–73 | Fixed evaluation suites, traceable scoring, prompt regression checks, and RAGAS metrics | `backend/app/services/evals/`, `backend/app/api/routes/evaluations.py`, `frontend/app/evals/` | Recreated |
 | 27 | Q71, Q74–75 | Feedback reasons, run trace lookup, and measured performance/token reporting | `backend/app/api/routes/feedback.py`, `backend/app/services/feedback_notifications.py`, `frontend/components/feedback-controls.tsx` | Recreated |
-| 28 | Q69, Q76–77 | Final source comparison, package/file conventions, and explicit record of deferred enterprise work | `docs/`, `backend/requirements.txt`, `frontend/package.json` | Planned |
+| 28 | Q69, Q76–77 | Final source comparison, package/file conventions, and explicit record of deferred enterprise work | `docs/`, `backend/requirements.txt`, `frontend/package.json` | Recreated |
 
 ## Documented limits to preserve
 
@@ -48,8 +48,15 @@
 - The source document says there has been no large-scale concurrency/load test; this reconstruction will not invent throughput numbers.
 - Real authentication, complete tenant isolation, crash-resumable long tasks, and a process sandbox are described as future work, not implemented features.
 
-## Final checks
+## Dependency security update
 
-- Compare the reconstructed source against the reference tree, allowing only documented ForgePilot branding and reconstruction documentation changes.
-- Run the existing backend tests and frontend production build; record any unavailable external service separately.
-- Check the package lock, ignored local files, and GitHub `main` branch after the final push.
+- The reference source used Next.js 15.1.2. The current ForgePilot frontend uses Next.js and its matching ESLint config 15.5.29, the fixed 15.x release line identified in the [November 2026 Next.js security release](https://nextjs.org/blog/november-2026-security-release). Next.js 15 remains in Maintenance LTS through January 31, 2027 per the [support policy](https://nextjs.org/support-policy).
+- PostCSS was updated and compatible overrides were added for nanoid and source-map-js. Removed dev-indicator options that the upgraded Next.js no longer supports. The locked frontend dependency tree passes a full npm audit with zero findings.
+
+## Final verification
+
+- The source manifest contains 185 tracked paths. Text comparison covered 179 source files after excluding the prior contribution/history documents and the four frontend package/config files verified through clean installation, audit, and build. There are no missing implementation files or unexplained source differences. `CONTRIBUTING.md` was rewritten for ForgePilot, the old `docs/PROJECT_HISTORY.md` was omitted, and this map was added.
+- Backend: `python -m pytest app/tests -q` — 209 passed.
+- Frontend: clean `npm ci` succeeded; `npm run build` succeeded and generated all 17 application routes.
+- Package name and lockfile root both resolve to `forgepilot-frontend`. `.env` is absent, `.env.example` is tracked, and `frontend/node_modules` is ignored.
+- The build reports existing React Hook dependency warnings. Compose YAML parses, but the Docker CLI is unavailable, so Compose normalization/container startup were not run. Live GitHub/LLM/PostgreSQL/Milvus integrations and large-scale load behavior were not exercised.
