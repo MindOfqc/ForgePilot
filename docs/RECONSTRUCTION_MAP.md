@@ -12,7 +12,7 @@
 | Step | Study topics | Reproduction point | Main source areas | Status |
 | --- | --- | --- | --- | --- |
 | 01 | Q3, Q9–11, Q17, Q70 | Project scaffold, runtime settings, dependency manifests, local service configuration, and initial frontend shell | `backend/app/core`, `backend/app/db`, `frontend/package*`, `docker-compose.yml`, `scripts/` | Planned |
-| 02 | Q3, Q18, Q33 | Relational entities and typed API contracts for repositories, conversations, engineering records, workflows, and drafts | `backend/app/db/models.py`, `backend/app/schemas/` | Planned |
+| 02 | Q3, Q18, Q33 | Relational entities and typed API contracts for repositories, conversations, engineering records, workflows, and drafts | `backend/app/db/models.py`, `backend/app/schemas/` | Recreated |
 | 03 | Q3, Q18 | GitHub client, repository connection, synchronization, and scheduled refresh | `backend/app/services/github/`, `backend/app/services/repos_sync.py`, `backend/app/api/routes/repos.py` | Planned |
 | 04 | Q4, Q32 | Issue, PR, and CI retrieval endpoints with their source evidence and status models | `backend/app/api/routes/{issues,pull_requests,ci}.py`, `backend/app/services/github/` | Planned |
 | 05 | Q8–15 | Model client, prompt definitions, structured output validation, and the reusable agent base | `backend/app/services/llm/`, `backend/app/services/agents/base.py` | Planned |
