@@ -57,6 +57,7 @@
 
 - The source manifest contains 185 tracked paths. Text comparison covered 179 source files after excluding the prior contribution/history documents and the four frontend package/config files verified through clean installation, audit, and build. There are no missing implementation files or unexplained source differences. `CONTRIBUTING.md` was rewritten for ForgePilot, the old `docs/PROJECT_HISTORY.md` was omitted, and this map was added.
 - Backend: `python -m pytest app/tests -q` — 209 passed.
-- Frontend: clean `npm ci` succeeded; `npm run build` succeeded and generated all 17 application routes.
-- Package name and lockfile root both resolve to `forgepilot-frontend`. `.env` is absent, `.env.example` is tracked, and `frontend/node_modules` is ignored.
+- Frontend: clean `npm ci` succeeded; `npm run build` succeeded and generated all 17 application routes. `npm run lint` exited successfully with existing React Hook warnings and the Next.js 15 `next lint` deprecation notice.
+- Runtime smoke with isolated SQLite and Milvus disabled: `/health` returned `ok`, `/api/repos` and `/api/skills` returned 200, and OpenAPI listed 93 paths. The production frontend returned 200 for 14 core pages. The temporary database was removed.
+- Package/style check: the package and lockfile roots both resolve to `forgepilot-frontend`; the source ESLint and TypeScript configs and Python requirements are retained. There is no Python formatter/linter configuration in the source. `.env` is absent, `.env.example` is tracked, and `frontend/node_modules` is ignored.
 - The build reports existing React Hook dependency warnings. Compose YAML parses, but the Docker CLI is unavailable, so Compose normalization/container startup were not run. Live GitHub/LLM/PostgreSQL/Milvus integrations and large-scale load behavior were not exercised.
