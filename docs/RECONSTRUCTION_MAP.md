@@ -16,7 +16,7 @@
 | 03 | Q3, Q18 | GitHub client, repository connection, synchronization, and scheduled refresh | `backend/app/services/github/`, `backend/app/services/repos_sync.py`, `backend/app/api/routes/repos.py` | Recreated |
 | 04 | Q4, Q32 | Issue, PR, and CI retrieval endpoints with their source evidence and status models | `backend/app/api/routes/{issues,pull_requests,ci}.py`, `backend/app/services/github/` | Recreated |
 | 05 | Q8–15 | Model client, prompt definitions, structured output validation, and the reusable agent base | `backend/app/services/llm/`, `backend/app/services/agents/base.py` | Recreated |
-| 06 | Q32 | Specialized Issue, PR review, and CI debugging agents with fallback and validated results | `backend/app/services/agents/{issue_agent,pr_review_agent,ci_debug_agent}.py` | Planned |
+| 06 | Q32 | Specialized Issue, PR review, and CI debugging agents with fallback and validated results | `backend/app/services/agents/{issue_agent,pr_review_agent,ci_debug_agent}.py` | Recreated |
 | 07 | Q17–22 | Chat routing, conversation persistence, SSE progress, and tool-call loop | `backend/app/services/agents/chat_agent.py`, `backend/app/api/routes/chat.py`, `backend/app/services/conversations.py` | Planned |
 | 08 | Q20–25 | Typed application tools and MCP client/server integration | `backend/app/services/mcp_client.py`, `backend/app/mcp/` | Planned |
 | 09 | Q26–29 | Skill discovery, scoped instructions, tool validation, and skill endpoints | `backend/app/services/skills/`, `backend/app/skills/`, `backend/app/api/routes/skills.py` | Planned |
