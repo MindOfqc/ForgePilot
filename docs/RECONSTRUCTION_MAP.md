@@ -32,7 +32,7 @@
 | 19 | Q52 | Current-code search, dependency relationships, and code graph views | `backend/app/services/{code_search,code_analysis,knowledge_graph}.py`, `frontend/app/code-graph/` | Recreated |
 | 20 | Q53–54 | Project-document discovery, fingerprinting, incremental re-indexing, and stale-index handling | `backend/app/services/project_indexing.py`, `backend/app/api/routes/project_index.py` | Recreated |
 | 21 | Q57–60 | Conversation history, session memory, project memory, provenance, and approval boundaries | `backend/app/services/{conversations,chat_memory,memory_hub}.py`, `backend/app/db/models.py` | Recreated |
-| 22 | Q61–64 | Context assembly, token budgets, summary placement, compaction, and tool-pair preservation | `backend/app/services/context_compression.py`, `backend/app/services/agents/chat_agent.py` | Planned |
+| 22 | Q61–64 | Context assembly, token budgets, summary placement, compaction, and tool-pair preservation | `backend/app/services/context_compression.py`, `backend/app/services/agents/chat_agent.py` | Recreated |
 | 23 | Q65–66 | Treat tool and RAG content as untrusted data; filter sensitive output and retain source attribution | `backend/app/core/security.py`, `backend/app/services/agents/`, `backend/app/services/rag/` | Planned |
 | 24 | Q67 | Draft-confirm-execute lifecycle, permission checks, and audit trail | `backend/app/api/routes/action_drafts.py`, `backend/app/services/permissions.py`, `backend/app/db/models.py` | Planned |
 | 25 | Q68, Q70 | PR worktree checkout and local Compose deployment; document that a worktree is not a security sandbox | `backend/app/services/worktree_manager.py`, `docker-compose.yml`, `scripts/` | Planned |
