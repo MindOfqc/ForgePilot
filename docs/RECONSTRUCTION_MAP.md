@@ -19,7 +19,7 @@
 | 06 | Q32 | Specialized Issue, PR review, and CI debugging agents with fallback and validated results | `backend/app/services/agents/{issue_agent,pr_review_agent,ci_debug_agent}.py` | Recreated |
 | 07 | Q17–22 | Chat routing, conversation persistence, SSE progress, and tool-call loop | `backend/app/services/agents/chat_agent.py`, `backend/app/api/routes/chat.py`, `backend/app/services/conversations.py` | Recreated |
 | 08 | Q20–25 | Typed application tools and MCP client/server integration | `backend/app/services/mcp_client.py`, `backend/app/mcp/` | Recreated |
-| 09 | Q26–29 | Skill discovery, scoped instructions, tool validation, and skill endpoints | `backend/app/services/skills/`, `backend/app/skills/`, `backend/app/api/routes/skills.py` | Planned |
+| 09 | Q26–29 | Skill discovery, scoped instructions, tool validation, and skill endpoints | `backend/app/services/skills/`, `backend/app/skills/`, `backend/app/api/routes/skills.py` | Recreated |
 | 10 | Q30–31 | Agent error handling, safe fallbacks, and service degradation behavior | `backend/app/services/agents/`, `backend/app/services/rag/`, `backend/app/main.py` | Planned |
 | 11 | Q33, Q35 | Workflow specification, planning, task dependencies, and structured agent handoff | `backend/app/services/agents/planner_agent.py`, `backend/app/schemas/workflow.py` | Planned |
 | 12 | Q36–39 | Dependency-aware execution, bounded parallelism, observation, evidence checks, and synthesis | `backend/app/services/agents/{workflow_orchestrator,observer_agent,synthesis_agent}.py` | Planned |
