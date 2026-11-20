@@ -28,7 +28,7 @@
 | 15 | Q45–47 | Embeddings, vector-store adapter, and document indexing | `backend/app/services/rag/{embeddings,vector_store,indexing}.py` | Recreated |
 | 16 | Q43, Q48 | Hybrid vector/keyword retrieval and reranking | `backend/app/services/rag/{retrieval,rerank,knowledge_base}.py` | Recreated |
 | 17 | Q50–51 | Evidence-gated answers, citations, and hallucination controls | `backend/app/services/rag/{qa,answer_gate}.py`, `backend/app/api/routes/rag.py` | Recreated |
-| 18 | Q55–56 | Pre-retrieval plus Agent-selected follow-up retrieval | `backend/app/services/agents/chat_agent.py`, `backend/app/services/rag/` | Planned |
+| 18 | Q55–56 | Pre-retrieval plus Agent-selected follow-up retrieval | `backend/app/services/agents/chat_agent.py`, `backend/app/services/rag/` | Recreated |
 | 19 | Q52 | Current-code search, dependency relationships, and code graph views | `backend/app/services/{code_search,code_analysis,knowledge_graph}.py`, `frontend/app/code-graph/` | Planned |
 | 20 | Q53–54 | Project-document discovery, fingerprinting, incremental re-indexing, and stale-index handling | `backend/app/services/project_indexing.py`, `backend/app/api/routes/project_index.py` | Planned |
 | 21 | Q57–60 | Conversation history, session memory, project memory, provenance, and approval boundaries | `backend/app/services/{conversations,chat_memory,memory_hub}.py`, `backend/app/db/models.py` | Planned |
