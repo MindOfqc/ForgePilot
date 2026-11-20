@@ -24,7 +24,7 @@
 | 11 | Q33, Q35 | Workflow specification, planning, task dependencies, and structured agent handoff | `backend/app/services/agents/planner_agent.py`, `backend/app/schemas/workflow.py` | Recreated |
 | 12 | Q36–39 | Dependency-aware execution, bounded parallelism, observation, evidence checks, and synthesis | `backend/app/services/agents/{workflow_orchestrator,observer_agent,synthesis_agent}.py` | Recreated |
 | 13 | Q38–41 | Replanning limits, task persistence, failure propagation, and workflow history UI | `backend/app/db/models.py`, `backend/app/api/routes/chat.py`, `frontend/app/workflow-runs/` | Recreated |
-| 14 | Q42, Q44 | Knowledge document extraction, normalization, chunking, and upload flow | `backend/app/services/rag/{document_extraction,document_processing,chunking,source_policy}.py` | Planned |
+| 14 | Q42, Q44 | Knowledge document extraction, normalization, chunking, and upload flow | `backend/app/services/rag/{document_extraction,document_processing,chunking,source_policy}.py` | Recreated |
 | 15 | Q45–47 | Embeddings, vector-store adapter, and document indexing | `backend/app/services/rag/{embeddings,vector_store,indexing}.py` | Planned |
 | 16 | Q43, Q48 | Hybrid vector/keyword retrieval and reranking | `backend/app/services/rag/{retrieval,rerank,knowledge_base}.py` | Planned |
 | 17 | Q50–51 | Evidence-gated answers, citations, and hallucination controls | `backend/app/services/rag/{qa,answer_gate}.py`, `backend/app/api/routes/rag.py` | Planned |
