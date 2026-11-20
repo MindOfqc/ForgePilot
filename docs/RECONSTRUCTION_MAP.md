@@ -37,7 +37,7 @@
 | 24 | Q67 | Draft-confirm-execute lifecycle, permission checks, and audit trail | `backend/app/api/routes/action_drafts.py`, `backend/app/services/permissions.py`, `backend/app/db/models.py` | Recreated |
 | 25 | Q68, Q70 | PR worktree checkout and local Compose deployment; document that a worktree is not a security sandbox | `backend/app/services/worktree_manager.py`, `docker-compose.yml`, `scripts/` | Recreated |
 | 26 | Q71–73 | Fixed evaluation suites, traceable scoring, prompt regression checks, and RAGAS metrics | `backend/app/services/evals/`, `backend/app/api/routes/evaluations.py`, `frontend/app/evals/` | Recreated |
-| 27 | Q71, Q74–75 | Feedback reasons, run trace lookup, and measured performance/token reporting | `backend/app/api/routes/feedback.py`, `backend/app/services/feedback_notifications.py`, `frontend/components/feedback-controls.tsx` | Planned |
+| 27 | Q71, Q74–75 | Feedback reasons, run trace lookup, and measured performance/token reporting | `backend/app/api/routes/feedback.py`, `backend/app/services/feedback_notifications.py`, `frontend/components/feedback-controls.tsx` | Recreated |
 | 28 | Q69, Q76–77 | Final source comparison, package/file conventions, and explicit record of deferred enterprise work | `docs/`, `backend/requirements.txt`, `frontend/package.json` | Planned |
 
 ## Documented limits to preserve
