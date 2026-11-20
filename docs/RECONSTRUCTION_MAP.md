@@ -20,14 +20,14 @@
 | 07 | Q17–22 | Chat routing, conversation persistence, SSE progress, and tool-call loop | `backend/app/services/agents/chat_agent.py`, `backend/app/api/routes/chat.py`, `backend/app/services/conversations.py` | Recreated |
 | 08 | Q20–25 | Typed application tools and MCP client/server integration | `backend/app/services/mcp_client.py`, `backend/app/mcp/` | Recreated |
 | 09 | Q26–29 | Skill discovery, scoped instructions, tool validation, and skill endpoints | `backend/app/services/skills/`, `backend/app/skills/`, `backend/app/api/routes/skills.py` | Recreated |
-| 10 | Q30–31 | Agent error handling, safe fallbacks, and service degradation behavior | `backend/app/services/agents/`, `backend/app/services/rag/`, `backend/app/main.py` | Planned |
+| 10 | Q30–31 | Agent error handling, safe fallbacks, and service degradation behavior | `backend/app/services/agents/`, `backend/app/services/rag/`, `backend/app/main.py` | Recreated |
 | 11 | Q33, Q35 | Workflow specification, planning, task dependencies, and structured agent handoff | `backend/app/services/agents/planner_agent.py`, `backend/app/schemas/workflow.py` | Recreated |
 | 12 | Q36–39 | Dependency-aware execution, bounded parallelism, observation, evidence checks, and synthesis | `backend/app/services/agents/{workflow_orchestrator,observer_agent,synthesis_agent}.py` | Recreated |
 | 13 | Q38–41 | Replanning limits, task persistence, failure propagation, and workflow history UI | `backend/app/db/models.py`, `backend/app/api/routes/chat.py`, `frontend/app/workflow-runs/` | Recreated |
 | 14 | Q42, Q44 | Knowledge document extraction, normalization, chunking, and upload flow | `backend/app/services/rag/{document_extraction,document_processing,chunking,source_policy}.py` | Recreated |
 | 15 | Q45–47 | Embeddings, vector-store adapter, and document indexing | `backend/app/services/rag/{embeddings,vector_store,indexing}.py` | Recreated |
 | 16 | Q43, Q48 | Hybrid vector/keyword retrieval and reranking | `backend/app/services/rag/{retrieval,rerank,knowledge_base}.py` | Recreated |
-| 17 | Q50–51 | Evidence-gated answers, citations, and hallucination controls | `backend/app/services/rag/{qa,answer_gate}.py`, `backend/app/api/routes/rag.py` | Planned |
+| 17 | Q50–51 | Evidence-gated answers, citations, and hallucination controls | `backend/app/services/rag/{qa,answer_gate}.py`, `backend/app/api/routes/rag.py` | Recreated |
 | 18 | Q55–56 | Pre-retrieval plus Agent-selected follow-up retrieval | `backend/app/services/agents/chat_agent.py`, `backend/app/services/rag/` | Planned |
 | 19 | Q52 | Current-code search, dependency relationships, and code graph views | `backend/app/services/{code_search,code_analysis,knowledge_graph}.py`, `frontend/app/code-graph/` | Planned |
 | 20 | Q53–54 | Project-document discovery, fingerprinting, incremental re-indexing, and stale-index handling | `backend/app/services/project_indexing.py`, `backend/app/api/routes/project_index.py` | Planned |
