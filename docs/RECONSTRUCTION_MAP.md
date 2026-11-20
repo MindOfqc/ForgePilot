@@ -26,7 +26,7 @@
 | 13 | Q38–41 | Replanning limits, task persistence, failure propagation, and workflow history UI | `backend/app/db/models.py`, `backend/app/api/routes/chat.py`, `frontend/app/workflow-runs/` | Recreated |
 | 14 | Q42, Q44 | Knowledge document extraction, normalization, chunking, and upload flow | `backend/app/services/rag/{document_extraction,document_processing,chunking,source_policy}.py` | Recreated |
 | 15 | Q45–47 | Embeddings, vector-store adapter, and document indexing | `backend/app/services/rag/{embeddings,vector_store,indexing}.py` | Recreated |
-| 16 | Q43, Q48 | Hybrid vector/keyword retrieval and reranking | `backend/app/services/rag/{retrieval,rerank,knowledge_base}.py` | Planned |
+| 16 | Q43, Q48 | Hybrid vector/keyword retrieval and reranking | `backend/app/services/rag/{retrieval,rerank,knowledge_base}.py` | Recreated |
 | 17 | Q50–51 | Evidence-gated answers, citations, and hallucination controls | `backend/app/services/rag/{qa,answer_gate}.py`, `backend/app/api/routes/rag.py` | Planned |
 | 18 | Q55–56 | Pre-retrieval plus Agent-selected follow-up retrieval | `backend/app/services/agents/chat_agent.py`, `backend/app/services/rag/` | Planned |
 | 19 | Q52 | Current-code search, dependency relationships, and code graph views | `backend/app/services/{code_search,code_analysis,knowledge_graph}.py`, `frontend/app/code-graph/` | Planned |
